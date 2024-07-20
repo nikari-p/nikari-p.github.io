@@ -10,7 +10,7 @@
             </div>
 
             <div class="character-row flex items-stretch" v-for="(character, name) in characters" :key="name">
-                <div class="character-icon sticky left-0 w-24 z-10 p-1 flex-shrink-0">
+                <div class="character-icon sticky left-0 w-24 z-50 p-1 flex-shrink-0">
                     <div class="rounded-md overflow-hidden w-16 h-7 bg-gradient-to-b from-[#885550] to-[#c9a36a] to-50%">
                         <div
                             class="bg-contain bg-center w-full h-full bg-no-repeat"
