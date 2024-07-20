@@ -2,7 +2,7 @@
     <div class="rounded-2xl mt-8 border border-gray-100 dark:border-gray-900 dark:bg-white/5 bg-black/5 p-10 overflow-x-auto">
         <div class="overflow-x-auto flex flex-col pb-10">
             <div class="flex items-center">
-                <div class="w-16 flex-shrink-0">
+                <div class="w-24 flex-shrink-0">
                 </div>
                 <div class="w-20 flex-shrink-0" v-for="(item) in normalHistory" :key="item">
                     <span class="font-medium text-center block">{{item}}</span>
@@ -10,7 +10,7 @@
             </div>
 
             <div class="character-row flex items-stretch" v-for="(character, name) in characters" :key="name">
-                <div class="character-icon sticky left-0 w-16 z-10 p-1 flex-shrink-0">
+                <div class="character-icon sticky left-0 w-24 z-10 p-1 flex-shrink-0">
                     <div class="rounded-md overflow-hidden w-16 h-7 bg-gradient-to-b from-[#885550] to-[#c9a36a] to-50%">
                         <div
                             class="bg-contain bg-center w-full h-full bg-no-repeat"
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div
-                    class="character-grid-col w-10 relative border-r dark:border-slate-700/40 border-slate-500/30 flex-shrink-0 even:dark:!border-slate-700 even:!border-slate-500"
+                    class="character-grid-col w-10 relative border-l dark:border-slate-700/40 border-slate-500/30 flex-shrink-0 even:dark:!border-slate-600 even:!border-slate-500"
                     v-for="(item, patch, index) in history"
                     :key="patch"
                     :data-element="character.element"
@@ -286,7 +286,7 @@
         &[data-banner="true"] {
             > div {
                 background-image: linear-gradient(to right, rgba(var(--element-color), 1) 0% ,  rgba(var(--element-color), 0.1) 80%,  rgba(var(--element-color), 0) 100%);
-                @apply rounded-l-full ml-6;
+                @apply rounded-l-full;
             }
         }
     }
