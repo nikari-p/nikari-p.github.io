@@ -29,12 +29,15 @@
                     :data-element="character.element"
                     :data-banner="checkCharacter(name, patch)"
                     :data-current="patch === currentPatch"
+                    :data-patch="patch"
+                    @mouseenter="onEnterCol(patch)"
+                    @mouseleave="onLeaveCol(patch)"
                 >
                     <div
                         v-if="checkCharacter(name, patch)"
                         ref="bars"
                         :start-index="index"
-                        class="h-4 absolute left-0 right-0 top-1/2 -translate-y-1/2 z-30"
+                        class="h-4 absolute left-0 right-0 top-1/2 -translate-y-1/2 z-30 pointer-events-none"
                     />
                 </div>
 
@@ -74,10 +77,10 @@
         "2.2.2": ["boothill", 'fuxuan'],
         "2.3.1": ["firefly", 'ruanmei'],
         "2.3.2": ["jade", 'argenti'],
-        // "2.4.1": ["yunli", 'huohuo'],
-        // "2.4.2": ["jiaoqiu", 'sparkle'],
-        // "2.5.1": ["feixiao"],
-        // "2.5.2": ["lingsha"],
+        "2.4.1": ["yunli", 'huohuo'],
+        "2.4.2": ["jiaoqiu", 'sparkle'],
+        "2.5.1": ["feixiao"],
+        "2.5.2": ["lingsha"],
 
     })
 
@@ -192,26 +195,26 @@
             element: 'Quantum',
             path: 'Erudition',
         },
-        // yunli: {
-        //     name: 'Yunli',
-        //     element: 'Physical',
-        //     path: 'Destruction',
-        // },
-        // jiaoqiu: {
-        //     name: 'Jiaoqiu',
-        //     element: 'Fire',
-        //     path: 'Nihility',
-        // },
-        // feixiao: {
-        //     name: 'Feixiao',
-        //     element: 'Wind',
-        //     path: 'Hunt',
-        // },
-        // lingsha: {
-        //     name: 'Lingsha',
-        //     element: 'Fire',
-        //     path: 'Abundance',
-        // },
+        yunli: {
+            name: 'Yunli',
+            element: 'Physical',
+            path: 'Destruction',
+        },
+        jiaoqiu: {
+            name: 'Jiaoqiu',
+            element: 'Fire',
+            path: 'Nihility',
+        },
+        feixiao: {
+            name: 'Feixiao',
+            element: 'Wind',
+            path: 'Hunt',
+        },
+        lingsha: {
+            name: 'Lingsha',
+            element: 'Fire',
+            path: 'Abundance',
+        },
     })
 
     const bars = ref(null)
@@ -235,6 +238,20 @@
         let name = patch.split('.')
         name.pop()
         return name.join('.')
+    }
+
+    const onEnterCol = (col) => {
+        Array.from(document.body.querySelectorAll(`[data-patch="${col}"]`)).forEach((el) => {
+            el.classList.add(`dark:bg-slate-800`)
+            el.classList.add(`bg-slate-300`)
+        })
+    }
+
+    const onLeaveCol = (col) => {
+        Array.from(document.body.querySelectorAll(`[data-patch="${col}"]`)).forEach((el) => {
+            el.classList.remove(`dark:bg-slate-800`)
+            el.classList.remove(`bg-slate-300`)
+        })
     }
 
     const renderBars = () => {
@@ -309,9 +326,9 @@
                 @apply rounded-l-full;
             }
         }
-        // &[data-current="true"] {
-        //     @apply border-dashed border-amber-800 dark:border-amber-200;
-        // }
+        &[data-current="true"] {
+            @apply border-dashed border-amber-800 dark:border-amber-300;
+        }
     }
 
 </style>
