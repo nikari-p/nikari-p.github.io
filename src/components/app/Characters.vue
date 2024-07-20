@@ -4,12 +4,12 @@
             <div class="flex items-center">
                 <div class="w-16 flex-shrink-0">
                 </div>
-                <div class="w-24 flex-shrink-0" v-for="(item) in normalHistory" :key="item">
+                <div class="w-20 flex-shrink-0" v-for="(item) in normalHistory" :key="item">
                     <span class="font-medium text-center block">{{item}}</span>
                 </div>
             </div>
 
-            <div class="character-row flex items-stretch border-b dark:border-slate-700/40 border-slate-500/30" v-for="(character, name) in characters" :key="name">
+            <div class="character-row flex items-stretch" v-for="(character, name) in characters" :key="name">
                 <div class="character-icon sticky left-0 w-16 z-10 p-1 flex-shrink-0">
                     <div class="rounded-md overflow-hidden w-16 h-7 bg-gradient-to-b from-[#885550] to-[#c9a36a] to-50%">
                         <div
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div
-                    class="character-grid-col w-12 relative border-r dark:border-slate-700/40 border-slate-500/30 flex-shrink-0"
+                    class="character-grid-col w-10 relative border-r dark:border-slate-700/40 border-slate-500/30 flex-shrink-0 even:dark:!border-slate-700 even:!border-slate-500"
                     v-for="(item, patch, index) in history"
                     :key="patch"
                     :data-element="character.element"
@@ -33,7 +33,7 @@
                         v-if="checkCharacter(name, patch)"
                         ref="bars"
                         :start-index="index"
-                        class="h-4 absolute left-0 right-0 top-1/2 -translate-y-1/2"
+                        class="h-4 absolute left-0 right-0 top-1/2 -translate-y-1/2 z-50"
                     />
                 </div>
             </div>
@@ -247,7 +247,7 @@
                 endIndex = parseInt(nextBanner.firstChild.getAttribute('start-index'), 10)
             }
 
-            const width = (endIndex - startIndex - 1) * 48
+            const width = (endIndex - startIndex - 1) * 40
 
             bar.style.width = `${width}px`
         })
@@ -285,7 +285,7 @@
     .character-grid-col {
         &[data-banner="true"] {
             > div {
-                background-image: linear-gradient(to right, rgba(var(--element-color), 1) 0% ,  rgba(var(--element-color), 0.2) 80%,  rgba(var(--element-color), 0) 100%);
+                background-image: linear-gradient(to right, rgba(var(--element-color), 1) 0% ,  rgba(var(--element-color), 0.1) 80%,  rgba(var(--element-color), 0) 100%);
                 @apply rounded-l-full ml-6;
             }
         }
