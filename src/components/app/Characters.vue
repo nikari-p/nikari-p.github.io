@@ -34,7 +34,7 @@
                         v-if="checkCharacter(name, patch)"
                         ref="bars"
                         :start-index="index"
-                        class="h-4 absolute left-0 right-0 top-1/2 -translate-y-1/2 z-50"
+                        class="h-4 absolute left-0 right-0 top-1/2 -translate-y-1/2 z-30"
                     />
                 </div>
 
