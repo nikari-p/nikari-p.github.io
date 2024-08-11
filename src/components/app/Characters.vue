@@ -52,7 +52,7 @@
 <script setup>
     import { ref, computed, onMounted } from 'vue'
 
-    const currentPatch = ref('2.3.2')
+    const currentPatch = ref('2.4.1')
 
     const history = ref({
         "1.0.1": ["seele"],
