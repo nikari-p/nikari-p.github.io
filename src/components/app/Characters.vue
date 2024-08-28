@@ -81,6 +81,8 @@
         "2.4.2": ["jiaoqiu", 'sparkle'],
         "2.5.1": ["feixiao"],
         "2.5.2": ["lingsha"],
+        "2.6.1": ["rappa"],
+        "2.6.2": [],
 
     })
 
@@ -214,6 +216,11 @@
             name: 'Lingsha',
             element: 'Fire',
             path: 'Abundance',
+        },
+        rappa: {
+            name: 'Rappa',
+            element: 'Imaginary',
+            path: 'Erudition',
         },
     })
 
