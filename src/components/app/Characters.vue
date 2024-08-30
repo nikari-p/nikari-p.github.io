@@ -79,8 +79,8 @@
         "2.3.2": ["jade", 'argenti'],
         "2.4.1": ["yunli", 'huohuo'],
         "2.4.2": ["jiaoqiu", 'sparkle'],
-        "2.5.1": ["feixiao"],
-        "2.5.2": ["lingsha"],
+        "2.5.1": ["feixiao", 'swan', 'kafka', 'robin'],
+        "2.5.2": ["lingsha", "topaz"],
         "2.6.1": ["rappa"],
         "2.6.2": [],
 
