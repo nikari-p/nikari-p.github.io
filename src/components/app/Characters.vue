@@ -52,7 +52,7 @@
 <script setup>
     import { ref, computed, onMounted } from 'vue'
 
-    const currentPatch = ref('2.5.1')
+    const currentPatch = ref('2.6.2')
 
     const history = ref({
         "1.0.1": ["seele"],
@@ -81,8 +81,8 @@
         "2.4.2": ["jiaoqiu", 'sparkle'],
         "2.5.1": ["feixiao", 'swan', 'kafka', 'robin'],
         "2.5.2": ["lingsha", "topaz"],
-        "2.6.1": ["rappa"],
-        "2.6.2": [],
+        "2.6.1": ["rappa", "danheng"],
+        "2.6.2": ["acheron", "aventurine"],
 
     })
 
@@ -118,7 +118,7 @@
             path: 'Nihility',
         },
         danheng: {
-            name: 'Dan Heng • Imbibitor Lunaen',
+            name: 'Dan Heng • Imbibitor Lunae',
             element: 'Imaginary',
             path: 'Destruction',
         },
