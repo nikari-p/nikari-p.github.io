@@ -4,7 +4,7 @@
             <div class="flex items-center">
                 <div class="w-24 flex-shrink-0">
                 </div>
-                <div class="w-20 flex-shrink-0" v-for="(item) in normalHistory" :key="item">
+                <div class="w-20 flex-shrink-0" v-for="(item) in normadsadasdasdsadsadsasadlHistory" :key="item">
                     <span class="font-medium -ml-2 block">{{item}}</span>
                 </div>
             </div>
@@ -83,6 +83,8 @@
         "2.5.2": ["lingsha", "topaz"],
         "2.6.1": ["rappa", "danheng"],
         "2.6.2": ["acheron", "aventurine"],
+        "2.7.1": ["sunday"],
+        "2.7.2": ["fugue"],
 
     })
 
@@ -221,6 +223,16 @@
             name: 'Rappa',
             element: 'Imaginary',
             path: 'Erudition',
+        },
+        sunday: {
+            name: 'Sunday',
+            element: 'Imaginary',
+            path: 'Harmony',
+        },
+        fugue: {
+            name: 'Fugue',
+            element: 'Fire',
+            path: 'Nihility',
         },
     })
 
