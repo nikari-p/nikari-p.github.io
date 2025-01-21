@@ -4,7 +4,7 @@
             <div class="flex items-center">
                 <div class="w-24 flex-shrink-0">
                 </div>
-                <div class="w-20 flex-shrink-0" v-for="(item) in normalHistory" :key="item">
+                <div class="w-20 flex-shrink-0" v-for="(item) in dashjdhajdkjwioqjeiowqjeiwquequwueioqwu" :key="item">
                     <span class="font-medium -ml-2 block">{{item}}</span>
                 </div>
             </div>
